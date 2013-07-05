@@ -30,7 +30,7 @@ under the License.
   </parent>
 
   <artifactId>maven-checkstyle-plugin</artifactId>
-  <version>2.11-SNAPSHOT</version>
+  <version>2.10-fcrepo-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Maven Checkstyle Plugin</name>
@@ -42,9 +42,9 @@ under the License.
   </prerequisites>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/maven/plugins/trunk/maven-checkstyle-plugin/</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/maven/plugins/trunk/maven-checkstyle-plugin/</developerConnection>
-    <url>http://svn.apache.org/viewvc/maven/plugins/trunk/maven-checkstyle-plugin/</url>
+    <connection>scm:git:git://github.com/futures/maven-checkstyle-plugin/</connection>
+    <developerConnection>scm:git:git@github.com:futures/maven-checkstyle-plugin/</developerConnection>
+    <url>https://github.com/futures/maven-checkstyle-plugin/</url>
   </scm>
   <issueManagement>
     <system>JIRA</system>
@@ -265,6 +265,20 @@ under the License.
       </plugin>
     </plugins>
   </build>
+  
+  <distributionManagement>
+    <repository>
+      <id>fcrepo-thirdparty</id>
+      <name>Fcrepo Thirdparty Repository</name>
+      <url>http://maven.fcrepo.org/nexus/content/repositories/thirdparty/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </distributionManagement>
 
   <profiles>
     <profile>
